@@ -14,7 +14,7 @@ erDiagram
 
     ACCOUNTS {
         int id PK
-        int account_id FK
+        int user_id FK
         string email
         string username
         string password_hash
@@ -23,7 +23,7 @@ erDiagram
 
     SESSIONS {
         int id PK
-        int session_id FK
+        int account_id FK
         string session_token
         date created_at
         date expires_at
@@ -31,7 +31,7 @@ erDiagram
 
     ROLES {
         int id PK
-        int role_id FK
+        int user_id FK
         string role_name
     }
 ```
